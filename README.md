@@ -1,21 +1,23 @@
 # Stitch
 
-**TODO: Add description**
+Merge two CSV files together on a matching field to a new combined CSV file in the same directory.
 
-## Installation
+## Installation and usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `stitch` to your list of dependencies in `mix.exs`:
+```
+$ git clone https://github.com/mkreyman/stitch.git
 
-```elixir
-def deps do
-  [
-    {:stitch, "~> 0.1.0"}
-  ]
-end
+$ cd stitch
+
+$ mix deps.get
+
+$ mix escript.build
+
+$ ./stitch test/fixtures/file1.csv test/fixtures/file2.csv name
+# =>  Output CSV file:
+# =>    <path_to>/test/fixtures/matched_file1.csv
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/stitch](https://hexdocs.pm/stitch).
+Enjoy! :)
+
 

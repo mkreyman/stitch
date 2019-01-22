@@ -4,7 +4,7 @@ defmodule Stitch do
   """
 
   @doc """
-  Merge two CSV files together on a matching field to new combined file in the same directory.
+  Merge two CSV files together on a matching field to a new combined CSV file in the same directory.
 
   ## Examples
 
