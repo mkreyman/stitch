@@ -25,3 +25,6 @@ stitch-*.tar
 # Ignore tmp directory
 tmp
 
+# Ignore compiled executable
+stitch
+
