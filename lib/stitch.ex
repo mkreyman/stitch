@@ -53,10 +53,13 @@ defmodule Stitch do
     |> Enum.to_list()
     |> Enum.group_by(& &1[match])
     |> Map.values()
-    |> Enum.map(fn [map1 | [map2 | []]] ->
-      Enum.reduce(new_headers, map1, fn x, acc ->
-        put_in(acc, [x], map2[x])
-      end)
+    |> Enum.map(fn
+      [map1 | [map2 | []]] ->
+        Enum.reduce(new_headers, map1, fn x, acc ->
+          put_in(acc, [x], map2[x])
+        end)
+      last ->
+        hd(last)
     end)
   end
 
